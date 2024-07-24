@@ -143,10 +143,28 @@ footer p {
     z-index: 200;
     position: fixed;
     align-items: center;
-    justify-content: center;
     display: flex;
     left: 50%;
     right: 50%;
     bottom: 30%;
 }
 
+.popup-content 
+{
+    
+    margin: 5% ;
+    padding: 20px;
+    width: 80%; 
+    max-width: 500px;
+    height: 80%;
+    margin-bottom: 8%;
+    
+    
+           
+}
+
+.popup-content form
+{
+    font-size: large;     
+    width: 20%;
+}

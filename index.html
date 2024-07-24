@@ -8,7 +8,28 @@
 <body>
 
 <div class="hidden_class" id="screenoverlay">
-<div class="popup_window"></div>
+     <div class="popup_window"> 
+       <div class="popup-content">
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="name" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="1234567" required>
+    
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Haifa">
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="18">
+    
+            <label for="image-url">Image URL:</label>
+            <input type="text" id="image-url" name="image-url" placeholder="icon.com">
+    
+            <button type="submit" class="btn">Save</button>
+        </form>        
+    </div>
+</div>
 </div>
 
 <button id="testbutton" onclick="myFunction()"> Click me to test! </button>
