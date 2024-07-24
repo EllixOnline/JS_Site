@@ -8,14 +8,15 @@
 body {
     background-image: url('./images/Palm_Tree_BG.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     padding: 20px;
 }
 
+
 header {
-    background-color: rgba(147, 135, 135, 0.35);
+    background-color: rgba(43, 39, 39, 0.306);
+    color: #fff;
     max-width: 100%;
     padding-left: 30px;
     padding-right: 30px;
@@ -61,6 +62,11 @@ footer p {
     text-align: center;
 }
 
+.top_container
+{
+    margin-bottom: 5%;
+}
+
 .contact_div {
     display: flex;
     align-items: center;
@@ -69,20 +75,18 @@ footer p {
     margin-right: 10%;
     background-color: #33333349;
     outline: 2px solid rgb(127, 236, 230);
-    padding-bottom: 15px;
-    margin-bottom: 3%;
+    padding: 15px 15px 15px 15px
 }
 
 .contact_image {
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
+    justify-content: center;
     flex: 0.2;
 }
 
 .contact_image img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 2px solid rgb(244, 227, 39);
 }
@@ -95,7 +99,54 @@ footer p {
 
 .contact_buttons {
     display: flex;
+    margin-right: 1%;
     gap: 10px;
     flex: 0.4;
     justify-content: flex-end;
 }
+
+.contact_buttons img 
+{
+    height: 45px;
+}
+
+.top_bar_icons
+{
+    margin-right: 1.5%;
+}
+.top_bar_icons img
+{
+    height: 35px;
+}
+
+.full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100; 
+}
+
+.hidden_class
+{
+    display: none;
+}
+
+.popup_window
+{
+    justify-self: center;
+    background-color: white;
+    width: 550px;
+    height: 300px;
+    z-index: 200;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    left: 50%;
+    right: 50%;
+    bottom: 30%;
+}
+
