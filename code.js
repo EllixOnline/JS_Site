@@ -118,6 +118,35 @@ function myFunction()
     overlayElement.appendChild(popupContent);
 }
 
+
+
+function AddContact(index) {
+    let overlayElement = document.getElementById('screenoverlay');
+    overlayElement.classList.add('full-screen-overlay');
+    overlayElement.classList.remove('hidden_class');
+    let popupContent = document.createElement('div');
+    popupContent.classList.add('popup_window');
+    popupContent.innerHTML = `
+        <form>
+            <label>Name:</label><br>
+            <input type="text" id="name" placeholder="name"></input><br>
+            <label>Last Name:}</label><br>
+            <input type="text" id="lastName" placeholder="last name"></input><br>
+            <label>Phone:</label><br>
+            <input type="number" id="phone" placeholder="phone"></input><br>
+            <label>Email:</label><br>
+            <input type="text" id="email" placeholder="email"></input><br>
+            <label>City:</label><br>
+            <input type="text" id="city" placeholder="city"></input><br>
+            <label>Address:</label><br>
+            <input type="text" id="address" placeholder="address"></input><br>
+            <button class="buttonAdd" onclick="add()">Add</button>
+        </form>
+    `;
+
+    overlayElement.appendChild(popupContent);
+}
+
 function RemoveContact (index)
 
 {
