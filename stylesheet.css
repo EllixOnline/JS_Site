@@ -78,6 +78,7 @@ footer p {
     padding: 15px 15px 15px 15px
 }
 
+
 .contact_image {
     border-radius: 50%;
     justify-content: center;
@@ -147,24 +148,18 @@ footer p {
     left: 50%;
     right: 50%;
     bottom: 30%;
+    
 }
 
-.popup-content 
-{
-    
-    margin: 5% ;
-    padding: 20px;
-    width: 80%; 
-    max-width: 500px;
-    height: 80%;
-    margin-bottom: 8%;
-    
-    
-           
-}
 
 .popup-content form
 {
     font-size: large;     
     width: 20%;
+}
+
+
+
+.hover-effect:hover {
+    transform: scale(1.2);
 }

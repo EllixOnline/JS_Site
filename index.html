@@ -1,38 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>Nikita Katsovich's JavaScript Integration Site</title>
+<title>Nikita Katsovich and Amit Nosayev JavaScript Integration Site</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="stylesheet.css">
 
 <body>
 
 <div class="hidden_class" id="screenoverlay">
-     <div class="popup_window"> 
-       <div class="popup-content">
-        <form>
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" placeholder="name" required>
-    
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" placeholder="1234567" required>
-    
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Haifa">
-    
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="18">
-    
-            <label for="image-url">Image URL:</label>
-            <input type="text" id="image-url" name="image-url" placeholder="icon.com">
-    
-            <button type="submit" class="btn">Save</button>
-        </form>        
-    </div>
-</div>
+     
 </div>
 
-<button id="testbutton" onclick="myFunction()"> Click me to test! </button>
 
 <header><u> Phone Book </u></header>
 
@@ -47,64 +25,15 @@
         <button type="button">Search</button>
       </div>
       <div class="top_bar_icons">
-    <img src="./images/Icons/IcoEx.png">
-      <img src="./images/Icons/IcoAdd.png">
+    <img class="hover-effect" src="./images/Icons/IcoEx.png" onclick="DeleteAll()">
+      <img class="hover-effect" src="./images/Icons/IcoAdd.png">
       </div>
     </div>
 
+      <container class="contact_container">
 
-      <div class="contact_div">
-        <div class="contact_image">
-          <img src="" alt="Error" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
-        </div>
-        <div class="contact_info">
-          <div>
-            <b><u>Name</u>:</b> Simha Golan <br>
-            <b><u>Phone</u>:</b> 0546669991 <br>
-          </div>
-        </div>
-        <div class="contact_buttons">
-          <img src="./images/Icons/IcoInfo.png">
-          <img src="./images/Icons/IcoEdit.png">
-          <img src="./images/Icons/IcoRemove.png">
-        </div>
-      </div>
-
-      <br>
-      <div class="contact_div">
-        <div class="contact_image">
-          <img src="" alt="Error" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
-        </div>
-        <div class="contact_info">
-          <div>
-            <b><u>Name</u>:</b> Avram Del Ruven <br>
-            <b><u>Phone</u>:</b> 0528945656 <br>
-          </div>
-        </div>
-        <div class="contact_buttons">
-          <img src="./images/Icons/IcoInfo.png">
-          <img src="./images/Icons/IcoEdit.png">
-          <img src="./images/Icons/IcoRemove.png">
-        </div>
-      </div>
-
-      <br>
-      <div class="contact_div">
-        <div class="contact_image">
-          <img src="">
-        </div>
-        <div class="contact_info">
-          <div>
-            <b><u>Name</u>:</b> Nikita Katsovich <br>
-            <b><u>Phone</u>:</b> 0546850131 <br>
-          </div>
-        </div>
-        <div class="contact_buttons">
-          <img src="./images/Icons/IcoInfo.png">
-          <img src="./images/Icons/IcoEdit.png">
-          <img src="./images/Icons/IcoRemove.png">
-        </div>
-      </div>
+      </container>
+      
     </div>
 </div>
 
