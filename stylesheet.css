@@ -31,6 +31,8 @@ header {
     background-color: rgba(255, 255, 255, 0.6);
     padding-bottom: 1%;
     padding-top: 15px;
+    min-height: 500px;
+    
 }
 
 .pb_window {
@@ -38,6 +40,7 @@ header {
     margin-left: 10%;
     margin-right: 10%;
     padding-bottom: 10%;
+    min-height: 400px;
 }
 
 footer {
@@ -67,7 +70,8 @@ footer p {
     margin-bottom: 5%;
 }
 
-.contact_div {
+.contact_div 
+{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,6 +82,27 @@ footer p {
     padding: 15px 15px 15px 15px
 }
 
+.contact_div_top
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #33333349;
+    outline: 2px solid rgb(127, 236, 230);
+    padding: 15px 15px 15px 15px
+}
+
+.contact_div:hover
+{
+    background-color: rgb(78, 183, 183);
+}
+
+.contact_div_top:hover
+{
+    background-color: rgba(38, 31, 31, 0.491);
+}
 
 .contact_image {
     border-radius: 50%;
@@ -106,6 +131,13 @@ footer p {
     justify-content: flex-end;
 }
 
+.contact_buttons button 
+{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
 .contact_buttons img 
 {
     height: 45px;
@@ -118,6 +150,13 @@ footer p {
 .top_bar_icons img
 {
     height: 35px;
+}
+
+.top_bar_icons button 
+{
+    border:none;
+    background:none;
+    cursor:pointer;
 }
 
 .full-screen-overlay {
@@ -162,4 +201,11 @@ footer p {
 
 .hover-effect:hover {
     transform: scale(1.2);
+}
+
+.infobox button
+{
+    border:none;
+    background:none;
+    cursor:pointer;
 }
