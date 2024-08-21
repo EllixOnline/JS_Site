@@ -86,7 +86,7 @@ function create(search) {
             content += `
             <div class="contact_div">
                 <div class="contact_image">
-                    <img <img src="${elem.profilepiclink}" alt="Description" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
+                    <img src="${elem.profilepiclink}" alt="ProfilePic" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
                 </div>
                 <div class="contact_info">
                     <div>
@@ -95,9 +95,9 @@ function create(search) {
                     </div>
                 </div>
                 <div class="contact_buttons">
-                    <button onclick="InfoContact(${index})"><img class="hover-effect" src="./images/Icons/IcoInfo.png" ></button>
-                    <button onclick="EditContact(${index})"><img class="hover-effect" src="./images/Icons/IcoEdit.png" ></button>
-                    <button onclick="RemoveContact(${index})"><img class="hover-effect" src="./images/Icons/IcoRemove.png"></button>
+                    <button onclick="InfoContact(${index})"><img class="hover-effect" src="./images/Icons/IcoInfo.png" alt="InfoIcon"></button>
+                    <button onclick="EditContact(${index})"><img class="hover-effect" src="./images/Icons/IcoEdit.png" alt="EditIcon"></button>
+                    <button onclick="RemoveContact(${index})"><img class="hover-effect" src="./images/Icons/IcoRemove.png" alt="RemoveIcon"></button>
                 </div>
             </div>`;
             }
@@ -112,7 +112,7 @@ function create(search) {
         content += `
         <div class="contact_div">
             <div class="contact_image">
-                <img src="${elem.profilepiclink}"  alt="Description" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
+                <img src="${elem.profilepiclink}"  alt="ProfilePic" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
             </div>
             <div class="contact_info">
                 <div>
@@ -121,9 +121,9 @@ function create(search) {
                 </div>
             </div>
             <div class="contact_buttons">
-                <img class="hover-effect" src="./images/Icons/IcoInfo.png" onclick="InfoContact(${index})">
-                <img class="hover-effect" src="./images/Icons/IcoEdit.png" onclick="EditContact(${index})">
-                <img class="hover-effect" src="./images/Icons/IcoRemove.png" onclick="RemoveContact(${index})">
+                <img class="hover-effect" src="./images/Icons/IcoInfo.png" alt="InfoIcon" onclick="InfoContact(${index})">
+                <img class="hover-effect" src="./images/Icons/IcoEdit.png" alt="EditIcon" onclick="EditContact(${index})">
+                <img class="hover-effect" src="./images/Icons/IcoRemove.png" alt="RemoveIcon" onclick="RemoveContact(${index})">
             </div>
         </div>`;
         }
@@ -162,7 +162,7 @@ function searchIt()
     popupContent.innerHTML = `
         <div class='infobox'>
         <div class='close'>
-        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png'><button>
+        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png' alt="x-icon"><button>
         </div>
         <div class='information'>
         <form>
@@ -203,7 +203,7 @@ function AddContact() {
     popupContent.innerHTML = `
         <div class='infobox'>
         <div class='close'>
-        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png'><button>
+        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png' alt="x-icon"><button>
         </div>
         <div class='information'>
         <form>
@@ -322,7 +322,6 @@ function sendInfoEdit(accindex)
 {
     event.preventDefault();
 
-    // Use `let` instead of `const` to allow reassignment
     let contact_name = '';
     let contact_lastname = '';
     let contact_phone = '';
@@ -408,7 +407,7 @@ function sendInfo()
 {
     event.preventDefault();
 
-    // Use `let` instead of `const` to allow reassignment
+
     let contact_name = '';
     let contact_lastname = '';
     let contact_phone = '';
