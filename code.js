@@ -152,7 +152,7 @@ function searchIt()
     popupContent.innerHTML = `
         <div class='infobox'>
         <div class='close'>
-        <button onclick='InfoContactClose()'><img src='./images/icons/x-mark.png'><button>
+        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png'><button>
         </div>
         <div class='information'>
         <form>
@@ -191,7 +191,7 @@ function AddContact() {
     popupContent.innerHTML = `
         <div class='infobox'>
         <div class='close'>
-        <button onclick='InfoContactClose()'><img src='./images/icons/x-mark.png'><button>
+        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png'><button>
         </div>
         <div class='information'>
         <form>
@@ -232,7 +232,7 @@ function EditContact(index) {
     popupContent.innerHTML = `
         <div class='infobox'>
         <div class='close'>
-        <button onclick='InfoContactClose()'><img src='./images/icons/x-mark.png'><button>
+        <button onclick='InfoContactClose()'><img src='./images/Icons/x-mark.png'><button>
         </div>
         <div class='information'>
         <form>
