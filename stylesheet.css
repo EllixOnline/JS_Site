@@ -368,12 +368,14 @@ header:hover
 {
     .popup_window {
         width: 90%;  
+        height: 100%;  
     }
 }
 
 @media (max-height: 570px) 
 {
     .popup_window {
-        width: 90%;    
+        width: 90%;  
+        height: 100%;  
     }
 }
