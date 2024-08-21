@@ -369,13 +369,19 @@ header:hover
     .popup_window {
         width: 90%;  /* Adjust the percentage as needed */
         height: 200%; /* Adjust the percentage as needed */
+        overflow-y:
+        scroll;
     }
+    
 }
 
 @media (max-height: 570px) 
 {
     .popup_window {
-        width: 90%;  /* Adjust the percentage as needed */
-        height: 200%; /* Adjust the percentage as needed */
+        width: 90%;  
+        height: 200%; 
+        overflow-y:
+        scroll;
     }
+    
 }
