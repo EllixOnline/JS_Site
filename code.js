@@ -50,6 +50,16 @@ const accounts =
         city: "Ofakim",
         address: "Uriel 55" ,
         profilepiclink: "./images/ProfilePicPlaceholder.jpg" 
+    },
+
+    {
+        name: "Haviva",
+        lastname: "Reich",
+        phone: "0546669241",
+        email: "lolthisthing@gmail.com",
+        city: "Ofakim",
+        address: "Opa 522" ,
+        profilepiclink: "./images/ProfilePicPlaceholder.jpg" 
     }
 
 ]
