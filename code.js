@@ -28,7 +28,7 @@ const accounts =
     {
      name: "Nikita",
      lastname: "Katsovich",
-     phone: "0546850131",
+     phone: "0546850121",
      email: "ellixonline@gmail.com",
      city: "Haifa",
      address: "Yad La Banim 206" ,
@@ -38,7 +38,7 @@ const accounts =
     {
         name: "Amit",
         lastname: "Nosayev",
-        phone: "0544883203",
+        phone: "0544883303",
         email: "abednosayev@gmail.com",
         city: "Or Akiva",
         address: "CityStreet 20" ,
