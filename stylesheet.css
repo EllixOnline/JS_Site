@@ -364,18 +364,69 @@ header:hover
     }
 }
 
-@media (max-width: 550px) 
+@media (max-width: 800px) 
 {
     .popup_window {
-        width: 90%;  
-        height: 100%;  
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .popup_window .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 200%;
+    }
+
+    .information{
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
-@media (max-height: 570px) 
-{
+@media (max-height: 570px) {
     .popup_window {
-        width: 90%;  
-        height: 100%;  
+        transform: scale(0.6);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        
     }
+
+    .popup_window .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 200%;
+    }
+
+    .popup_window form{
+        transform: scale(0.9);
+    }
+
+    .information{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
 }

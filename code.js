@@ -102,7 +102,7 @@ function create(search) {
         content += `
         <div class="contact_div">
             <div class="contact_image">
-                <img <img src="${elem.profilepiclink}" alt="Description" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
+                <img src="${elem.profilepiclink}"  alt="Description" class="hover-effect" onerror="this.onerror=null; this.src='./images/ProfilePicPlaceholder.jpg'">
             </div>
             <div class="contact_info">
                 <div>
@@ -171,6 +171,8 @@ function searchIt()
 
     overlayElement.appendChild(popupContent);
 }
+
+
 
 function InfoContactClose()
 {
