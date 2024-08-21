@@ -30,6 +30,7 @@ header {
     font-family: 'Phone_book_font', sans-serif;
 }
 
+/* div for the phone book */
 .phone_book {
     background-color: rgba(255, 255, 255, 0.6);
     padding-bottom: 1%;
@@ -38,6 +39,7 @@ header {
     
 }
 
+/* an entry in phone book */
 .pb_window {
     background-color: rgba(147, 135, 135, 0.35);
     margin-left: 10%;
@@ -45,6 +47,7 @@ header {
     padding-bottom: 10%;
     min-height: 400px;
 }
+
 
 footer {
     height: 50px;
@@ -68,24 +71,11 @@ footer p {
     text-align: center;
 }
 
-.top_container
-{
-    margin-bottom: 5%;
-}
 
+
+
+/* An entry in the contacts phone book */
 .contact_div 
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: #33333349;
-    outline: 2px solid rgb(127, 236, 230);
-    padding: 15px 15px 15px 15px
-}
-
-.contact_div_top
 {
     display: flex;
     align-items: center;
@@ -102,11 +92,27 @@ footer p {
     background-color: rgb(78, 183, 183);
 }
 
+/* Container with search bar and remove all and add */
+.contact_div_top
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #33333349;
+    outline: 2px solid rgb(127, 236, 230);
+    padding: 15px 15px 15px 15px
+}
+
+
 .contact_div_top:hover
 {
     background-color: rgba(38, 31, 31, 0.491);
 }
 
+
+/* Avatar image of the contact */
 .contact_image {
     border-radius: 50%;
     justify-content: center;
@@ -120,12 +126,14 @@ footer p {
     border: 2px solid rgb(244, 227, 39);
 }
 
+/* Name and phone number of the contact */
 .contact_info {
     display: flex;
     flex: 2;
     padding-left: 20px;
 }
 
+/* Icons for info,edit and remove  */
 .contact_buttons {
     display: flex;
     margin-right: 1%;
@@ -146,6 +154,7 @@ footer p {
     height: 45px;
 }
 
+/* Icon settings for remove all and add contact */
 .top_bar_icons
 {
     margin-right: 1.5%;
@@ -162,6 +171,7 @@ footer p {
     cursor:pointer;
 }
 
+/* A black screen overlay for popup windows */
 .full-screen-overlay {
     position: fixed;
     top: 0;
@@ -172,11 +182,13 @@ footer p {
     z-index: 100; 
 }
 
+/* Special class for hiding windows */
 .hidden_class
 {
     display: none;
 }
 
+/* White info box inside overlay */
 .popup_window {
     justify-self: center;
     background-color: white;
@@ -217,7 +229,7 @@ footer p {
     width: 90%;
 }
 
-
+/* Information of selected contact inside the info,edit and add popup windows */
 .information
 {
     display: flex;
@@ -254,12 +266,14 @@ footer p {
 }
 
 
-
+/* Effect class for increasing hover effects */
 .hover-effect:hover {
     transform: scale(1.2);
 }
 
 
+
+/* Special button with special function */
 .Partybutton 
 {
     margin: 2px;
@@ -295,7 +309,7 @@ header:hover
     justify-content:top;
 }
 
-
+/* Div for special close window icon in the popup box */
 .close button
 {
     border:none;

@@ -7,6 +7,7 @@
 
 <body>
 
+<!-- Space for popup window -->
 <div class="hidden_class" id="screenoverlay">
      
 </div>
@@ -20,39 +21,44 @@
     <br><br>
 
     <div class="contact_div_top">
+      <!-- Search bar -->
       <div class="search-container">
         <input type="text" id="inputintosearch" placeholder="Search...">
       </div>
+      <!-- Delete All Icon -->
       <div class="top_bar_icons">
       <button onclick="DeleteAll()">
       <img class="hover-effect" src="./images/Icons/IcoEx.png" alt="Execute">
       </button>
+      <!-- Add contacts Icon -->
       <button onclick="AddContact()">
       <img class="hover-effect" src="./images/Icons/IcoAdd.png" alt="AddContact">
       </button>
       </div>
     </div>
 
-      <container class="contact_container">
+    <!-- Containter for addition of contacts list -->
+      <container class="contact_container"> 
 
       </container>
       
     </div>
 </div>
 
+<!-- Special button function -->
 <div class="Partybutton">
-
 <button onclick="Party()" >(CLICK ME)  Party time! (CLICK ME)</button><br>
 </div>
 
-<script src="code.js"></script>
+
 
 <footer>
   <p>Copyrighted for Nikita and Amit @ Handesaim 2024</p>
 </footer>
 
+<!-- Script runs here -->
+<script src="code.js"></script>
 </body>
-
 
 
 </html>

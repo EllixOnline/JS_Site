@@ -1,5 +1,6 @@
 'use strict'
 
+// Function to preload background images for 'party mode'
 function preloadImages() {
     var images = ['Palm_Tree_BG_Main.png',
          'Palm_Tree_BG_Party1.png',
@@ -13,6 +14,7 @@ function preloadImages() {
     }
 }
 
+// Screen overlay listener for closing window when black screen pressed
 document.getElementById("screenoverlay").addEventListener("click", function(e) {
 
     if (e.target.id === "screenoverlay") {
@@ -20,6 +22,7 @@ document.getElementById("screenoverlay").addEventListener("click", function(e) {
     }
 });
 
+// Basic array of contact objects (Default)
 const accounts = 
 [
     {
@@ -73,13 +76,14 @@ document.getElementById("inputintosearch").addEventListener("input", function(ev
 
 
 
-
+//When page starts run creation for default contact array
 create();
 
+//Populates the contact list according to parrameters
 function create(search) {
     let content = "";
     const container = document.getElementsByClassName("contact_container")[0];
-    if(search == null || search == '')
+    if(search == null || search == '') // If search bar is empty - revert to default view for the list with current contacts
     {
         accounts.forEach((elem, index) => 
             {
@@ -103,11 +107,11 @@ function create(search) {
             }
         )
     }
-    else
+    else //If something is being searched reset the view of contacts and populate it accordingly
     {
     accounts.forEach((elem, index) => 
         {
-        if(elem.name.includes(search) || elem.phone.includes(search) || elem.lastname.includes(search))
+        if(elem.name.includes(search) || elem.phone.includes(search) || elem.lastname.includes(search)) // If either name,last name or phone number being searched - add to the list
         {
         content += `
         <div class="contact_div">
@@ -132,7 +136,7 @@ function create(search) {
     container.innerHTML += content;
 }
 
-
+// Get search bar info and create list of contacts accordingly
 function searchIt()
 {
     const container = document.getElementsByClassName("contact_container")[0];
@@ -142,6 +146,7 @@ function searchIt()
 }
 
 
+// Removes all contacts from contact list
   function DeleteAll()
   {
     if (confirm(`Do you want to DELETE ALL CONTACTS?`))
@@ -153,6 +158,16 @@ function searchIt()
     }
   }
 
+// Close the popup window and clean the html with tags
+function InfoContactClose()
+{
+    let overlayElement = document.getElementById('screenoverlay');
+    overlayElement.innerHTML = '';
+    overlayElement.classList.add('hidden_class');
+    overlayElement.classList.remove('full-screen-overlay');
+}
+
+  // Creates an info window out of contact information for specific contact selected from the contact list 
   function InfoContact(index) {
     let overlayElement = document.getElementById('screenoverlay');
     overlayElement.classList.add('full-screen-overlay');
@@ -184,16 +199,8 @@ function searchIt()
 
 
 
-function InfoContactClose()
-{
-    let overlayElement = document.getElementById('screenoverlay');
-    overlayElement.innerHTML = '';
-    overlayElement.classList.add('hidden_class');
-    overlayElement.classList.remove('full-screen-overlay');
-}
 
-
-
+// Add a new contact to the list if it does not exist (By name or number)
 function AddContact() {
     let overlayElement = document.getElementById('screenoverlay');
     overlayElement.classList.add('full-screen-overlay');
@@ -234,6 +241,7 @@ function AddContact() {
 
 }
 
+//Edit an existing contact if there is no conflict
 function EditContact(index) {
     let overlayElement = document.getElementById('screenoverlay');
     overlayElement.classList.add('full-screen-overlay');
@@ -275,6 +283,26 @@ function EditContact(index) {
 
 }
 
+//Validates the phone number and email address
+function validator(contact_phone,contact_email)
+{
+    const errorcount = 0;
+
+    if(contact_phone == '' || contact_phone.toString().length != 10)
+    {
+        alert("Invalid phone number!");
+        errorcount++;
+    }
+
+    if(!(contact_email.includes('@')) || contact_email == '')
+    {
+        alert("Invalid email!");
+        errorcount++;
+    }
+    return errorcount;  
+}
+
+//Check if contact exists in the contact list already according to name+last name and phone number
 function CheckExisting(name,lastname,phone)
 {
     let code = 3;
@@ -296,6 +324,7 @@ function CheckExisting(name,lastname,phone)
 
 }
 
+//Check if exists already but allows to edit current contact info
 function CheckExistingWithEdit(name,lastname,phone,indexofprofile)
 {
     let code = 3;
@@ -318,10 +347,12 @@ function CheckExistingWithEdit(name,lastname,phone,indexofprofile)
 
 }
 
+// Send info to edit to the contacts array if it doesn't conflict
 function sendInfoEdit(accindex)
 {
     event.preventDefault();
 
+    //Clean the inputs for validation
     let contact_name = '';
     let contact_lastname = '';
     let contact_phone = '';
@@ -334,6 +365,7 @@ function sendInfoEdit(accindex)
 
     const container = document.getElementsByClassName("contact_container")[0];
 
+    //Get inputs from current inputs box
     contact_name = document.getElementById('name').value;
     contact_lastname = document.getElementById('lastname').value;
     contact_phone = document.getElementById('phone').value;
@@ -342,7 +374,7 @@ function sendInfoEdit(accindex)
     contact_address = document.getElementById('address').value;
     contact_image = document.getElementById('image').value;
 
-
+    //Array of fields that need to be filled 
     let infoarr = [contact_name, contact_lastname, contact_phone, contact_email, contact_city, contact_address];
     let flag = false;
 
@@ -352,17 +384,18 @@ function sendInfoEdit(accindex)
             flag = true;
     });
 
-    if(flag)
+    if(flag) //If fields that need to be filled are empty - cancel 
     {
         alert("Please fill all empty spots!");
     }
     else
     {
+        // Checks if the field of image is empty - if it is: Fill it with default image 
         if(contact_image== null || contact_image == '')
             contact_image = './images/ProfilePicPlaceholder.jpg';
 
-        const code = CheckExistingWithEdit(contact_name, contact_lastname, contact_phone,accindex);
-        const validation = validator(contact_phone, contact_email);
+        const code = CheckExistingWithEdit(contact_name, contact_lastname, contact_phone,accindex); //Existing user codes
+        const validation = validator(contact_phone, contact_email); // Validation of correctness of inputs
 
         if(!flag)
         {
@@ -407,7 +440,7 @@ function sendInfo()
 {
     event.preventDefault();
 
-
+    //Clean the inputs for validation
     let contact_name = '';
     let contact_lastname = '';
     let contact_phone = '';
@@ -420,6 +453,7 @@ function sendInfo()
 
     const container = document.getElementsByClassName("contact_container")[0];
 
+    //Get new input for contact addition
     contact_name = document.getElementById('name').value;
     contact_lastname = document.getElementById('lastname').value;
     contact_phone = document.getElementById('phone').value;
@@ -428,16 +462,18 @@ function sendInfo()
     contact_address = document.getElementById('address').value;
     contact_image = document.getElementById('image').value;
 
-
+    //Array of fields that need to be filled 
     let infoarr = [contact_name, contact_lastname, contact_phone, contact_email, contact_city, contact_address];
     let flag = false;
 
+    
     infoarr.forEach(elem =>
     {
         if(elem == '')
             flag = true;
     });
-
+    
+    //If fields that need to be filled are empty - cancel 
     if(flag)
     {
         alert("Please fill all empty spots!");
@@ -447,14 +483,15 @@ function sendInfo()
         if(contact_image== null || contact_image == '')
             contact_image = './images/ProfilePicPlaceholder.jpg';
 
-        const code = CheckExisting(contact_name, contact_lastname, contact_phone);
-        const validation = validator(contact_phone, contact_email);
+        
+        const code = CheckExisting(contact_name, contact_lastname, contact_phone); // Check if contact exists
+        const validation = validator(contact_phone, contact_email); // Validation of input correctness
 
         if(!flag)
         {
             if (validation == 0)
             {
-                if (code == 3)
+                if (code == 3) // If all correct - Add contact to the list
                 {
                     accounts.push(
                     {
@@ -490,36 +527,10 @@ function sendInfo()
 }
 
 
-function validator(contact_phone,contact_email)
-{
-    const errorcount = 0;
-
-    if(contact_phone == '' || contact_phone.toString().length != 10)
-    {
-        alert("Invalid phone number!");
-        errorcount++;
-    }
-
-    if(!(contact_email.includes('@')) || contact_email == '')
-    {
-        alert("Invalid email!");
-        errorcount++;
-    }
-    return errorcount;  
-}
 
 
 
-
-
-
-
-
-
-
-
-
-function RemoveContact (index)
+function RemoveContact (index) // Removes specified contact from the contacts array
 
 {
     if (confirm(`Do you want to DELETE ${accounts[index].name}'s accout? `))
@@ -533,9 +544,8 @@ function RemoveContact (index)
 
 
 
-
-
-function Party() {
+function Party() // Special function for background 'party'
+{
 
     alert("Party time!");
 
