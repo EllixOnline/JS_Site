@@ -367,7 +367,7 @@ header:hover
 {
     .popup_window {
         width: 90%;  /* Adjust the percentage as needed */
-        height: 60%; /* Adjust the percentage as needed */
+        height: 80%; /* Adjust the percentage as needed */
         box-sizing: border-box; /* Includes padding and border in width and height */
     }
 }
@@ -376,7 +376,7 @@ header:hover
 {
     .popup_window {
         width: 90%;  /* Adjust the percentage as needed */
-        height: 60%; /* Adjust the percentage as needed */
+        height: 80%; /* Adjust the percentage as needed */
         box-sizing: border-box; /* Includes padding and border in width and height */
     }
 }
